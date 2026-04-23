@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Define o conjunto de caracteres como UTF-8 -->
+  <meta charset="UTF-8">
+
+  <!-- Faz o site funcionar bem em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título da aba do navegador -->
+  <title>Simulador de Pedido</title>
+
+  <!-- Conecta o arquivo CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Container principal da página -->
+  <div class="container">
+
+    <!-- Título principal -->
+    <h1>🍔 Simulador de Pedido do TDS261T</h1>
+
+    <!-- Subtítulo explicativo -->
+    <p class="subtitulo">
+      Escolha seus itens e veja o valor total do pedido
+    </p>
+
+    <!-- Área que contém todos os produtos -->
+    <div class="cards">
+
+      <!-- CARD = UM PRODUTO -->
+      <!-- Usamos <label> para que clicar no card marque o checkbox -->
+      <label class="card">
+        <!-- Checkbox que identifica se o item está selecionado -->
+        <input type="checkbox" id="hamburguer">
+        <!-- Imagem do produto -->
+        <img src="assets/hamburguer.jpg" alt="Hambúrguer">
+        <!-- Nome do produto -->
+        <h2>Hambúrguer</h2>
+        <!-- Descrição do produto -->
+        <p>Pão, carne e queijo</p>
+        <!-- Preço do produto -->
+        <span>R$ 10,00</span>
+      </label>
+
+      <label class="card">
+        <input type="checkbox" id="batata">
+        <img src="assets/batata.png" alt="Batata Frita">
+        <h2>Batata Frita</h2>
+        <p>Porção crocante</p>
+        <span>R$ 8,00</span>
+      </label>
+
+      <label class="card">
+        <input type="checkbox" id="refri">
+        <img src="assets/refri.jpg" alt="Refrigerante">
+        <h2>Refrigerante</h2>
+        <p>Lata 350ml</p>
+        <span>R$ 5,00</span>
+      </label>
+
+      <label class="card">
+        <input type="checkbox" id="pizza">
+        <img src="assets/OIP.jpg" alt="Pizza">
+        <h2>Pizza</h2>
+        <p>Fatia especial</p>
+        <span>R$ 12,00</span>
+      </label>
+
+      <label class="card">
+        <input type="checkbox" id="sorvete">
+        <img src="assets/sorvete.jpg" alt="Sorvete">
+        <h2>Sorvete</h2>
+        <p>Taça gelada</p>
+        <span>R$ 7,00</span>
+      </label>
+
+      <label class="card">
+        <input type="checkbox" id="suco">
+        <img src="assets/suco.jpg" alt="Suco">
+        <h2>Suco</h2>
+        <p>Copo natural</p>
+        <span>R$ 6,00</span>
+      </label>
+
+    </div>
+
+    <!-- Botão que chama a função calcular() para somar o pedido -->
+    <button onclick="calcular()">Calcular Pedido</button>
+
+    <!-- Área onde o resultado do pedido será exibido -->
+    <div id="resultado" class="resultado"></div>
+
+  </div>
+
+  <!-- Conecta o arquivo JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
